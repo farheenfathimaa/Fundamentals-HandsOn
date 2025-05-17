@@ -5,7 +5,7 @@ import "./App.css";
 function App() {
   const [message, setMessage] = useState();
   useEffect(() => {
-    fetch("/api/")
+    fetch("http://localhost:3000/db")
       .then(res => res.json())
       .then(res => setMessage(res.message))
       .catch(console.error);
